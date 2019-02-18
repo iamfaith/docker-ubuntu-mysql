@@ -17,9 +17,7 @@ This mysql container is based on ubuntu:trusty, and has the following in additio
 Simple, not exposed:
 
 ```shell
-docker run -d --name="mysql" \
-    -e "MYSQL_PASSWORD=password" \
-    xianzixiang/mysql
+ sudo docker run -d --name="mysql" -e "MYSQL_PASSWORD=password" xianzixiang/mysql
 ```
 
 Exposed: 
