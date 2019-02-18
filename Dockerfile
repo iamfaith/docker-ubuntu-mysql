@@ -1,5 +1,5 @@
-FROM ubuntu:trusty
-MAINTAINER Vasan
+FROM xianzixiang/xenial
+MAINTAINER faith
 
 # Install packages: mysql adds a root user with no password
 ENV DEBIAN_FRONTEND noninteractive
