@@ -5,6 +5,12 @@ MAINTAINER faith
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
   apt-get -yq install mysql-server && \
+  mkdir -p /var/lib/mysql && \
+	mkdir -p /var/run/mysqld && \
+	mkdir -p /var/log/mysql && \
+	chown -R mysql:mysql /var/lib/mysql && \
+	chown -R mysql:mysql /var/run/mysqld && \
+	chown -R mysql:mysql /var/log/mysql
   rm -rf /var/lib/apt/lists/*
 
 # Change mysql to listen on 0.0.0.0
